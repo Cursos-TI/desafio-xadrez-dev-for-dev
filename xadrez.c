@@ -12,6 +12,47 @@ void moverTorre(int passos) {
     moverTorre(passos - 1);
 }
 
+// Função recursiva para Bispo com loop aninhado
+void moverBispo(int passos) {
+    if (passos == 0) return;
+
+    for (int i = 0; i < 1; i++) {
+        for (int j = 0; j < 1; j++) {
+            printf("Cima Direita\n");
+        }
+    }
+
+    moverBispo(passos - 1);
+}
+
+// Função recursiva para Rainha
+void moverRainha(int passos) {
+    if (passos == 0) return;
+    printf("Esquerda\n");
+    moverRainha(passos - 1);
+}
+
+// Movimento do Cavalo com múltiplas condições e break/continue
+void moverCavalo() {
+    printf("\nMovimento do Cavalo:\n");
+
+    for (int i = 0; i <= 4; i++) { // Loop para direção vertical
+        if (i == 1) continue; // pulando uma iteração apenas para demonstrar uso do continue
+        if (i == 4) break;    // interrompe após 3 movimentos
+
+        printf("Cima\n");
+    }
+
+    int j = 0;
+    while (j < 2) { // Movimento horizontal
+        j++;
+        if (j == 1) {
+            printf("Direita\n");
+            break; // interrompe após um movimento
+        }
+    }
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
