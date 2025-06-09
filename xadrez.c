@@ -3,6 +3,14 @@
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+// Aluno André Santos
+
+// Função recursiva para Torre
+void moverTorre(int passos) {
+    if (passos == 0) return;
+    printf("Direita\n");
+    moverTorre(passos - 1);
+}
 
 int main() {
     // Nível Novato - Movimentação das Peças
@@ -27,6 +35,16 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+    
+    printf("Movimento da Torre:\n");
+    moverTorre(5);
 
+    printf("\nMovimento do Bispo:\n");
+    moverBispo(5);
+
+    printf("\nMovimento da Rainha:\n");
+    moverRainha(8);
+
+    moverCavalo();
     return 0;
 }
